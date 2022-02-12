@@ -2,10 +2,17 @@ const config = {
   content: ["./src/**/*.{html,js,svelte,ts}"],
 
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'md': '768px',
+        'lg': '1024px',
+      }
+    },
   },
 
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };
 
 module.exports = config;
