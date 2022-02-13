@@ -1,7 +1,11 @@
 <script>
   import "../app.css";
+  import Header from '$lib/partial/Header.svelte';
+  import Footer from '$lib/partial/Footer.svelte';
 </script>
 
-<div class="container mx-auto px-4">
+<Header />
+<div class="container mx-auto p-5">
   <slot />
 </div>
+<Footer />
