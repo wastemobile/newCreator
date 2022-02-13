@@ -1,5 +1,11 @@
-<script conext="module">
-    export const testKey = process.env['TEST_KEY'];
+<script>
+    import { TEST_KEY } from '$lib/Env';
+    let testKey;
+    if (process.env.NODE_ENV === 'production') {
+        testKey = process.env.TEST_KEY;
+    } else {
+        testKey = TEST_KEY;
+    }
 </script>
 
 <svelte:head>
